@@ -1,0 +1,14 @@
+{
+  "name": "Share PWA",
+  "short_name": "Share PWA",
+  "background_color": "#FFF",
+  "theme_color": "#FFF",
+  "icons": [{
+    "src": "./logo.svg",
+    "type": "image/svg+xml",
+    "sizes": "841x595"
+  }],
+  "start_url": "/",
+  "display": "fullscreen",
+  "scope": "/"
+}
