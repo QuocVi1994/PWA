@@ -26,13 +26,13 @@ const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 const ForkTsCheckerWebpackPlugin = require('react-dev-utils/ForkTsCheckerWebpackPlugin');
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
-
+const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 const postcssNormalize = require('postcss-normalize');
 
 const appPackageJson = require(paths.appPackageJson);
 
 // Source maps are resource heavy and can cause out of memory issue for large source files.
-const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false';
+const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP && process.env.GENERATE_SOURCEMAP !== 'false';
 
 const webpackDevClientEntry = require.resolve(
   'react-dev-utils/webpackHotDevClient'
@@ -76,6 +76,7 @@ const hasJsxRuntime = (() => {
     return false;
   }
 })();
+
 
 // This is the production and development configuration.
 // It is focused on developer experience, fast rebuilds, and a minimal bundle.
@@ -737,6 +738,11 @@ module.exports = function (webpackEnv) {
             },
           },
         }),
+      new ServiceWorkerWebpackPlugin({
+        entry: path.join(__dirname, '../public/sw.js'),
+        excludes: ['**/*.map', '**/*.txt'],
+        minimize: isEnvProduction
+      }),
     ].filter(Boolean),
     // Some libraries import Node modules but don't use them in the browser.
     // Tell webpack to provide empty mocks for them so importing them works.
