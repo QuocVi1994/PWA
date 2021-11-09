@@ -1,6 +1,8 @@
 /* eslint-disable no-restricted-globals */
 var cacheName = 'bs-0-2-0';
-var cacheFiles = ['/'].concat(global.serviceWorkerOption.assets);
+var cacheFiles = ['/'].concat(global.serviceWorkerOption.assets).map(path => {
+  return '/PWA/build' + path;
+});
 
 self.addEventListener('install', function (e) {
   console.log('Service Worker 状态： install');
