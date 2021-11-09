@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React, { Suspense } from 'react'
+import { Routes, Route } from 'react-router-dom';
+import YueKangCode from './pages/YueKangCode';
+import About from './pages/About';
+// import { buildBaseURL } from '../configs/constants';
+const genPath = (path) => {
+  return (process.env.NODE_ENV === 'development' ? '' : process.env.PUBLIC_URL) + path;
+}
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Suspense fallback={<span>loading</span>}>
+      <Routes>
+        <Route path={genPath('/')} element={<YueKangCode />} />
+        <Route path={genPath('/yuekangcode')} element={<YueKangCode />} />
+        <Route path={genPath('/about')} element={<About />} />
+      </Routes>
+    </Suspense>
+  )
 }
 
-export default App;
+export default App

@@ -1,19 +1,18 @@
 {
   "files": {
-    "main.css": "/PWA/build/static/css/main.5e3647ae.chunk.css",
-    "main.js": "/PWA/build/static/js/main.3a994664.chunk.js",
-    "runtime-main.js": "/PWA/build/static/js/runtime-main.e47adc5a.js",
-    "static/js/2.def0b8cc.chunk.js": "/PWA/build/static/js/2.def0b8cc.chunk.js",
-    "static/js/3.e5c2c803.chunk.js": "/PWA/build/static/js/3.e5c2c803.chunk.js",
+    "main.css": "/PWA/build/static/css/main.1359096b.chunk.css",
+    "main.js": "/PWA/build/static/js/main.ccc06aba.chunk.js",
+    "runtime-main.js": "/PWA/build/static/js/runtime-main.6406bc12.js",
+    "static/js/2.61d26f12.chunk.js": "/PWA/build/static/js/2.61d26f12.chunk.js",
+    "static/js/3.c55d2c40.chunk.js": "/PWA/build/static/js/3.c55d2c40.chunk.js",
     "index.html": "/PWA/build/index.html",
-    "static/js/2.def0b8cc.chunk.js.LICENSE.txt": "/PWA/build/static/js/2.def0b8cc.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/PWA/build/static/media/logo.6ce24c58.svg",
+    "static/js/2.61d26f12.chunk.js.LICENSE.txt": "/PWA/build/static/js/2.61d26f12.chunk.js.LICENSE.txt",
     "sw.js": "/PWA/build/sw.js"
   },
   "entrypoints": [
-    "static/js/runtime-main.e47adc5a.js",
-    "static/js/2.def0b8cc.chunk.js",
-    "static/css/main.5e3647ae.chunk.css",
-    "static/js/main.3a994664.chunk.js"
+    "static/js/runtime-main.6406bc12.js",
+    "static/js/2.61d26f12.chunk.js",
+    "static/css/main.1359096b.chunk.css",
+    "static/js/main.ccc06aba.chunk.js"
   ]
 }
