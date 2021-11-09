@@ -1,53 +1,17 @@
-import { useState, useEffect } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import React, { Suspense } from 'react'
+import { Routes, Route } from 'react-router-dom';
+import YueKangCode from './pages/YueKangeCode';
+import About from './pages/About';
 
-function App() {
-  const [count, setCount] = useState(0)
-  useEffect(() => {
-    if ('serviceWorker' in window.navigator) {
-      navigator.serviceWorker.register('/serviceWorker.js', {scope: '/' })
-      .then(function () {
-        console.log('registered')
-      }).catch(function (e) {
-        console.log(e, 222)
-      })
-    }
-  }, [])
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
+    <Suspense fallback={<span>loading</span>}>
+      <Routes>
+        <Route path="/" element={<YueKangCode />} />
+        <Route path="/yuekangcode" element={<YueKangCode />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </Suspense>
   )
 }
 
