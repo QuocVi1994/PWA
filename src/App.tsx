@@ -2,8 +2,7 @@ import React, { Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom';
 import YueKangCode from './pages/YueKangeCode';
 import About from './pages/About';
-
-const baseURL = '/PWA/dist';
+import { baseURL } from '../configs/constants';
 
 const App = () => {
   return (
