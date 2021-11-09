@@ -1,2 +1,3 @@
 
-export const baseURL = '/PWA/dist';
+export const buildBaseURL = '/PWA/dist';
+export const baseURL = '/PWA';

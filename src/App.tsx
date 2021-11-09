@@ -2,15 +2,15 @@ import React, { Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom';
 import YueKangCode from './pages/YueKangeCode';
 import About from './pages/About';
-import { baseURL } from '../configs/constants';
+import { buildBaseURL } from '../configs/constants';
 
 const App = () => {
   return (
     <Suspense fallback={<span>loading</span>}>
       <Routes>
-        <Route path={baseURL} element={<YueKangCode />} />
-        <Route path={`${baseURL}/yuekangcode`} element={<YueKangCode />} />
-        <Route path={`${baseURL}/about`} element={<About />} />
+        <Route path={buildBaseURL} element={<YueKangCode />} />
+        <Route path={`${buildBaseURL}/yuekangcode`} element={<YueKangCode />} />
+        <Route path={`${buildBaseURL}/about`} element={<About />} />
       </Routes>
     </Suspense>
   )
