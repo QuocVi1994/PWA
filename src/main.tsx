@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import { BrowserRouter } from 'react-router-dom'
-import { localServiceWorkerRegister } from "./serviceWorker";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -14,4 +13,3 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-localServiceWorkerRegister();
