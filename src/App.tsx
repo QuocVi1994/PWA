@@ -3,13 +3,15 @@ import { Routes, Route } from 'react-router-dom';
 import YueKangCode from './pages/YueKangeCode';
 import About from './pages/About';
 
+const baseURL = '/PWA/dist';
+
 const App = () => {
   return (
     <Suspense fallback={<span>loading</span>}>
       <Routes>
-        <Route path="/" element={<YueKangCode />} />
-        <Route path="/yuekangcode" element={<YueKangCode />} />
-        <Route path="/about" element={<About />} />
+        <Route path={baseURL} element={<YueKangCode />} />
+        <Route path={`${baseURL}/yuekangcode`} element={<YueKangCode />} />
+        <Route path={`${baseURL}/about`} element={<About />} />
       </Routes>
     </Suspense>
   )
