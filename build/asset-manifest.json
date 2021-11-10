@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/PWA/build/static/css/main.1359096b.chunk.css",
-    "main.js": "/PWA/build/static/js/main.ccc06aba.chunk.js",
+    "main.js": "/PWA/build/static/js/main.5e35a141.chunk.js",
     "runtime-main.js": "/PWA/build/static/js/runtime-main.6406bc12.js",
-    "static/js/2.61d26f12.chunk.js": "/PWA/build/static/js/2.61d26f12.chunk.js",
+    "static/js/2.dca031ee.chunk.js": "/PWA/build/static/js/2.dca031ee.chunk.js",
     "static/js/3.c55d2c40.chunk.js": "/PWA/build/static/js/3.c55d2c40.chunk.js",
     "index.html": "/PWA/build/index.html",
-    "static/js/2.61d26f12.chunk.js.LICENSE.txt": "/PWA/build/static/js/2.61d26f12.chunk.js.LICENSE.txt",
+    "static/js/2.dca031ee.chunk.js.LICENSE.txt": "/PWA/build/static/js/2.dca031ee.chunk.js.LICENSE.txt",
     "sw.js": "/PWA/build/sw.js"
   },
   "entrypoints": [
     "static/js/runtime-main.6406bc12.js",
-    "static/js/2.61d26f12.chunk.js",
+    "static/js/2.dca031ee.chunk.js",
     "static/css/main.1359096b.chunk.css",
-    "static/js/main.ccc06aba.chunk.js"
+    "static/js/main.5e35a141.chunk.js"
   ]
 }
