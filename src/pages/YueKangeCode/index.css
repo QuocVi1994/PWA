@@ -24,6 +24,7 @@
   animation: App-logo-spin infinite 0.5s linear;
 }
 .bgImg {
+  display: block;
   width: 80px;
   height: 40px;
 }
