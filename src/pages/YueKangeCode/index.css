@@ -1,6 +1,6 @@
 
 .container {
-
+  position: relative;
 }
 
 .img {
@@ -39,4 +39,12 @@
   to {
     transform: translateY(-40px);
   }
+}
+
+.infoContainer {
+  position: absolute;
+  top: 114px;
+  left: calc((100vw - 100vw * (351/ 375)) / 2);
+  width: calc(100vw * (351/ 375));
+  height: calc(100vw * (394 / 375));
 }

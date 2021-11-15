@@ -1,6 +1,7 @@
 import React from 'react';
 import './index.css'
 import bgIcon from '../../../assests/imgs/bg.png'
+import infoIcon from '../../../assests/imgs/info_702_788.png'
 
 const YueKangCode: React.FC = () => {
   const colArr = new Array(20).fill(1)
@@ -17,6 +18,7 @@ const YueKangCode: React.FC = () => {
           </div>)
         }
       </div>
+      <img className="infoContainer" src={infoIcon} />
     </div>
   )
 }
