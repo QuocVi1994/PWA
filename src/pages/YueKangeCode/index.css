@@ -8,7 +8,8 @@
 }
 
 .bgContainer {
-  height: 683px;
+  height: calc(100vw * (683 / 375) + env(safe-area-inset-top));
+  padding-top: env(safe-area-inset-top);
   width: 100vw;
   overflow: hidden;
 }
@@ -26,10 +27,10 @@
 }
 .bgImg {
   display: block;
+  font-size: 0px;
   width: 80px;
   height: 40px;
-  font-size:0px;
-  margin-left: -1px;
+  /* margin-left: -0.5px; */
 }
 
 @keyframes App-logo-spin {

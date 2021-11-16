@@ -1,11 +1,14 @@
-import React from 'react';
+import React,{ useMemo } from 'react';
 import './index.css'
 import bgIcon from '../../../assests/imgs/bg.png'
 import infoIcon from '../../../assests/imgs/info_702_788.png'
 
+const windowWidth = document.body.clientWidth;
+const scrollBgHeight = windowWidth * (683 / 375);
+const colArr = new Array(Math.ceil(scrollBgHeight / 40) + 4).fill(1);
+const rowArr = new Array(Math.ceil(windowWidth / 80)).fill(1);
+
 const YueKangCode: React.FC = () => {
-  const colArr = new Array(20).fill(1)
-  const rowArr = new Array(10).fill(1)
   return (
     <div className="container">
       {/* <img className="img" src="../../../assests/imgs/yuekangma.jpg" /> */}

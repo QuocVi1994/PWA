@@ -17,7 +17,7 @@ export default defineConfig({
         short_name: '粤康码',
         description: '粤康码 Off-Line',
         theme_color: '#ffffff',
-        display: 'fullscreen'
+        display: "standalone",
       }
     })
   ],
