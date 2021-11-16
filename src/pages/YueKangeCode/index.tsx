@@ -11,9 +11,9 @@ const YueKangCode: React.FC = () => {
       {/* <img className="img" src="../../../assests/imgs/yuekangma.jpg" /> */}
       <div className="bgContainer">
         {
-          colArr.map(() => <div className="bgLineContainer">
+          colArr.map((_, index) => <div key={`line_${index}`} className="bgLineContainer">
             {
-              rowArr.map(() => <img className="bgImg" src={bgIcon} />)
+              rowArr.map((_, index2) => <img key={`img_${index2}`} className="bgImg" src={bgIcon} />)
             }
           </div>)
         }

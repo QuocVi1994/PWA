@@ -1,1 +1,1 @@
-{"name":"PWA","short_name":"PWA","start_url":"/PWA/dist/","display":"standalone","background_color":"#ffffff","lang":"en","scope":"/PWA/dist/"}
+{"name":"粤康码","short_name":"粤康码","start_url":"/PWA/dist/","display":"fullscreen","background_color":"#ffffff","lang":"en","scope":"/PWA/dist/","description":"粤康码 Off-Line","theme_color":"#ffffff"}

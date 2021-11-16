@@ -9,9 +9,16 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       workbox: {
-        sourcemap: true,
+        sourcemap: false,
         cleanupOutdatedCaches: false  
       },
+      manifest: {
+        name: '粤康码',
+        short_name: '粤康码',
+        description: '粤康码 Off-Line',
+        theme_color: '#ffffff',
+        display: 'fullscreen'
+      }
     })
   ],
   base: '/PWA/dist/'

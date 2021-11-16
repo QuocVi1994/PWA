@@ -1,2 +1,76 @@
-if(!self.define){let e,s={};const i=(i,d)=>(i=new URL(i+".js",d).href,s[i]||new Promise((s=>{if("document"in self){const e=document.createElement("script");e.src=i,e.onload=s,document.head.appendChild(e)}else e=i,importScripts(i),s()})).then((()=>{let e=s[i];if(!e)throw new Error(`Module ${i} didn’t register its module`);return e})));self.define=(d,r)=>{const n=e||("document"in self?document.currentScript.src:"")||location.href;if(s[n])return;let t={};const c=e=>i(e,n),o={module:{uri:n},exports:t,require:c};s[n]=Promise.all(d.map((e=>o[e]||c(e)))).then((e=>(r(...e),t)))}}define(["./workbox-b5f4aab3"],(function(e){"use strict";self.skipWaiting(),e.clientsClaim(),e.precacheAndRoute([{url:"assets/index.50106acf.js",revision:"9e0500edad4c168845a5da449ec18702"},{url:"assets/index.c9f7c8ef.css",revision:"455548656679df87dc11a16ced692bd9"},{url:"assets/vendor.9756d152.js",revision:"a3a7d819bc57d0cdde021ed6d94facbe"},{url:"index.html",revision:"47dbf997068db65cca127e0ac5e6b8df"},{url:"registerSW.js",revision:"79a98b435f42793c130125eb2d5e8618"},{url:"manifest.webmanifest",revision:"44dfe9c6ff571114a7eb9a1e52d34b03"}],{}),e.registerRoute(new e.NavigationRoute(e.createHandlerBoundToURL("index.html")))}));
-//# sourceMappingURL=sw.js.map
+if (!self.define) {
+  const e = (e) => {
+      "require" !== e && (e += ".js");
+      let r = Promise.resolve();
+      return (
+        s[e] ||
+          (r = new Promise(async (r) => {
+            if ("document" in self) {
+              const s = document.createElement("script");
+              (s.src = e), document.head.appendChild(s), (s.onload = r);
+            } else importScripts(e), r();
+          })),
+        r.then(() => {
+          if (!s[e]) throw new Error(`Module ${e} didn’t register its module`);
+          return s[e];
+        })
+      );
+    },
+    r = (r, s) => {
+      Promise.all(r.map(e)).then((e) => s(1 === e.length ? e[0] : e));
+    },
+    s = { require: Promise.resolve(r) };
+  self.define = (r, i, t) => {
+    s[r] ||
+      (s[r] = Promise.resolve().then(() => {
+        let s = {};
+        const n = { uri: location.origin + r.slice(1) };
+        return Promise.all(
+          i.map((r) => {
+            switch (r) {
+              case "exports":
+                return s;
+              case "module":
+                return n;
+              default:
+                return e(r);
+            }
+          })
+        ).then((e) => {
+          const r = t(...e);
+          return s.default || (s.default = r), s;
+        });
+      }));
+  };
+}
+define("./sw.js", ["./workbox-d9ace124"], function (e) {
+  "use strict";
+  self.skipWaiting(),
+    e.clientsClaim(),
+    e.precacheAndRoute(
+      [
+        {
+          url: "assets/index.88d74c3c.js",
+          revision: "74a1e1fd2576b3e2243964ce2e48d149",
+        },
+        {
+          url: "assets/index.f8db8713.css",
+          revision: "4487c0a830965c01b1726dfd0c82b184",
+        },
+        {
+          url: "assets/vendor.c514e21a.js",
+          revision: "d99cd44a6f0cc9c03043813ab14b83c8",
+        },
+        { url: "index.html", revision: "66a744573fb401425928cd8fbfa706ab" },
+        { url: "registerSW.js", revision: "79a98b435f42793c130125eb2d5e8618" },
+        {
+          url: "manifest.webmanifest",
+          revision: "4240a3ebeaf3523fbf44f69798a57f41",
+        },
+      ],
+      {}
+    ),
+    e.registerRoute(
+      new e.NavigationRoute(e.createHandlerBoundToURL("index.html"))
+    );
+});

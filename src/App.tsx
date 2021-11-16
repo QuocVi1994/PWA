@@ -8,9 +8,9 @@ const App = () => {
   return (
     <Suspense fallback={<span>loading</span>}>
       <Routes>
-        <Route path={buildBaseURL} element={<YueKangCode />} />
-        <Route path={`${buildBaseURL}/yuekangcode`} element={<YueKangCode />} />
-        <Route path={`${buildBaseURL}/about`} element={<About />} />
+        <Route path="/" element={<YueKangCode />} />
+        <Route path={`/yuekangcode`} element={<YueKangCode />} />
+        <Route path={`/about`} element={<About />} />
       </Routes>
     </Suspense>
   )
