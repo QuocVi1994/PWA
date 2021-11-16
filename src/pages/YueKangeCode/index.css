@@ -9,7 +9,6 @@
 
 .bgContainer {
   height: calc(100vw * (683 / 375) + env(safe-area-inset-top));
-  padding-top: env(safe-area-inset-top);
   width: 100vw;
   overflow: hidden;
 }
