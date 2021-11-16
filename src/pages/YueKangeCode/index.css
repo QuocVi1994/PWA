@@ -48,3 +48,39 @@
   width: calc(100vw * (351/ 375));
   height: calc(100vw * (394 / 375));
 }
+
+.address {
+  position: absolute;
+  top: calc(114px + 100vw * (12 / 375));
+  left: calc((100vw - 100vw * (351 / 375)) / 2 + 100vw * (26/ 375));
+  background-color: rgb(232, 241, 251);
+  color: rgb(20, 20, 20);
+  font-size: calc(100vw * 16 / 375);
+  font-family: PingFangSC-Medium, sans-serif;
+  width: calc(100vw * (80 / 375));
+  text-align: center;
+}
+
+.name {
+  position: absolute;
+  top: calc(114px + 100vw * (12 / 375));
+  left: calc((100vw - 100vw * (351/ 375)) / 2 + 100vw * (130/ 375));
+  background-color: rgb(232, 241, 251);
+  color: rgb(20, 20, 20);
+  font-size: calc(100vw * 16 / 375);
+  font-family: PingFangSC-Medium, sans-serif;
+  width: calc(100vw * (90 / 375));
+  text-align: center;
+}
+
+.time {
+  position: absolute;
+  top: calc(114px + 100vw * (58 / 375));
+  left: calc((100vw - 100vw * (351/ 375)) / 2 + 100vw * (58/ 375));
+  width: calc(100vw * (240 / 375));
+  text-align: center;
+  background-color: #fff;
+  color: #000;
+  font-size: calc(100vw * 31 / 375);
+  font-family: PingFangSC-Semibold, sans-serif;
+}
