@@ -177,6 +177,8 @@
   font-family: PingFangSC-Regular, sans-serif;
   width: calc(100vw * (120 / 375));
   text-align: center;
+  overflow: hidden;
+  min-height: 20px;
 }
 
 .yimiao {
@@ -189,6 +191,8 @@
   font-family: PingFangSC-Regular, sans-serif;
   width: calc(100vw * (90 / 375));
   text-align: center;
+  overflow: hidden;
+  min-height: 20px;
 }
 
 .otherInfoContainer {
