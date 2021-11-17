@@ -51,7 +51,7 @@ const YueKangCode: React.FC = () => {
   }, []);
 
   return (
-    <div>
+    <div style={{width: "100vw" }}>
       <div className="container">
         <div className="bgContainer">
           {colArr.map((_, index) => (

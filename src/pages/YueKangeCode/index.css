@@ -44,7 +44,7 @@
 
 .titleBar {
   position: absolute;
-  top: calc(100vw * (10 / 375));;
+  top: calc(100vw * (10 / 375) + env(safe-area-inset-top));
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -86,9 +86,9 @@
 }
 
 .middle {
-  margin: 0 calc(100vw * (12 / 375));
+  margin: 0 calc(100vw * (10 / 375));
   width: calc(100vw * (1 / 375));
-  height: calc(100vw * (25 / 375));
+  height: calc(100vw * (23 / 375));
   background-color: rgba(255, 255, 255, 0.3);
 }
 .circle {
@@ -97,34 +97,34 @@
 }
 
 .smallCircle {
-  width: calc(100vw * (6/ 375));
-  height: calc(100vw * (6 / 375));
+  width: calc(100vw * (4/ 375));
+  height: calc(100vw * (4 / 375));
 }
 
 .bigCircle {
-  width: calc(100vw * (9 / 375));
-  height: calc(100vw * (9 / 375));
+  width: calc(100vw * (7 / 375));
+  height: calc(100vw * (7 / 375));
   margin: 0 calc(100vw * (3 / 375));
 }
 
 .middleCircle {
-  width: calc(100vw * (8 / 375));
-  height: calc(100vw * (8 / 375));
+  width: calc(100vw * (6 / 375));
+  height: calc(100vw * (6 / 375));
 }
 
 .right {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: calc(100vw * (16 / 375));
-  height: calc(100vw * (16 / 375));
+  width: calc(100vw * (14 / 375));
+  height: calc(100vw * (14 / 375));
   border: #fff calc(100vw * (3 / 375)) solid;
   background-color: transparent;
 }
 
 .infoContainer {
   position: absolute;
-  top: calc(100vw * (70 / 375));
+  top: calc(100vw * (70 / 375) + env(safe-area-inset-top));
   left: calc((100vw - 100vw * (351/ 375)) / 2);
   width: calc(100vw * (351/ 375));
   height: calc(100vw * (394 / 375));
@@ -132,7 +132,7 @@
 
 .address {
   position: absolute;
-  top: calc(100vw * ((12 + 70) / 375));
+  top: calc(100vw * ((12 + 70) / 375) + env(safe-area-inset-top));
   left: calc((100vw - 100vw * (351 / 375)) / 2 + 100vw * (26/ 375));
   background-color: rgb(232, 241, 251);
   color: rgb(20, 20, 20);
@@ -144,7 +144,7 @@
 
 .name {
   position: absolute;
-  top: calc(100vw * ((12 + 70) / 375));
+  top: calc(100vw * ((12 + 70) / 375) + env(safe-area-inset-top));
   left: calc((100vw - 100vw * (351/ 375)) / 2 + 100vw * (130/ 375));
   background-color: rgb(232, 241, 251);
   color: rgb(20, 20, 20);
@@ -156,7 +156,7 @@
 
 .time {
   position: absolute;
-  top: calc(100vw * ((58 + 70) / 375));
+  top: calc(100vw * ((58 + 70) / 375) + env(safe-area-inset-top));
   left: calc((100vw - 100vw * (351/ 375)) / 2 + 100vw * (58/ 375));
   width: calc(100vw * (240 / 375));
   text-align: center;
@@ -168,7 +168,7 @@
 
 .otherInfoContainer {
   position: absolute;
-  top: calc(100vw * ((394 + 70 + 8) / 375));
+  top: calc(100vw * ((394 + 70 + 8) / 375) + env(safe-area-inset-top));
   left: calc((100vw - 100vw * (352/ 375)) / 2);
   width: calc(100vw * (352/ 375));
   height: calc(100vw * (126 / 375));
@@ -176,7 +176,7 @@
 
 .text {
   position: absolute;
-  top: calc(100vw * ((394 + 70 + 6 + 126 + 12) / 375));
+  top: calc(100vw * ((394 + 70 + 6 + 126 + 12) / 375) + env(safe-area-inset-top));
   font-size: calc(100vw * 16 / 375);
   font-family: PingFangSC-Regular, sans-serif;
   color: #fff;
