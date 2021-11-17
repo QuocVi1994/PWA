@@ -154,6 +154,7 @@
   text-align: center;
 }
 
+
 .time {
   position: absolute;
   top: calc(100vw * ((58 + 70) / 375) + env(safe-area-inset-top));
@@ -164,6 +165,30 @@
   color: #000;
   font-size: calc(100vw * 31 / 375);
   font-family: PingFangSC-Semibold, sans-serif;
+}
+
+.hesuan {
+  position: absolute;
+  top: calc(100vw * ((563) / 375) + env(safe-area-inset-top));
+  left: calc(100vw * (42 / 375));
+  background-color: #fff;
+  color: rgba(158, 158, 158, 0.9);
+  font-size: calc(100vw * 12 / 375);
+  font-family: PingFangSC-Regular, sans-serif;
+  width: calc(100vw * (120 / 375));
+  text-align: center;
+}
+
+.yimiao {
+  position: absolute;
+  top: calc(100vw * ((563) / 375) + env(safe-area-inset-top));
+  left: calc(100vw * (230 / 375));
+  background-color: #fff;
+  color: rgba(158, 158, 158, 0.9);
+  font-size: calc(100vw * 12 / 375);
+  font-family: PingFangSC-Regular, sans-serif;
+  width: calc(100vw * (90 / 375));
+  text-align: center;
 }
 
 .otherInfoContainer {
