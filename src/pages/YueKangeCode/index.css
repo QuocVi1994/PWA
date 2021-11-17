@@ -5,6 +5,7 @@
 
 .img {
   width: 100vw;
+  height: auto;
 }
 
 .bgContainer {
@@ -22,7 +23,7 @@
   flex-direction: row;
   overflow: hidden;
   margin-bottom: -1px;
-  animation: App-logo-spin infinite 0.5s linear;
+  animation: bg-img-transform infinite 0.5s linear;
 }
 .bgImg {
   display: block;
@@ -32,7 +33,7 @@
   /* margin-left: -0.5px; */
 }
 
-@keyframes App-logo-spin {
+@keyframes bg-img-transform {
   from {
     transform: translateY(0px);
   }
@@ -41,9 +42,89 @@
   }
 }
 
+.titleBar {
+  position: absolute;
+  top: calc(100vw * (10 / 375));;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftArrow {
+  position: absolute;
+  border-left: #fff 2px solid;
+  border-bottom: #fff 2px solid;
+  width: calc(100vw * (6 / 375));
+  height: calc(100vw * (6 / 375));
+  background-color: transparent;
+  left: 20px;
+  transform: rotate(45deg);
+}
+
+.title {
+  font-size: calc(100vw * 18 / 375);
+  font-family: PingFangSC-Regular, sans-serif;
+  color: #fff;
+}
+
+.rightIcon {
+  position: absolute;
+  right: 5px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 6px 16px;
+  border: rgba(255, 255, 255, 0.3) calc(100vw * (1 / 375)) solid;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.middle {
+  margin: 0 calc(100vw * (12 / 375));
+  width: calc(100vw * (1 / 375));
+  height: calc(100vw * (25 / 375));
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.circle {
+  background-color: #fff;
+  border-radius: 100%;
+}
+
+.smallCircle {
+  width: calc(100vw * (6/ 375));
+  height: calc(100vw * (6 / 375));
+}
+
+.bigCircle {
+  width: calc(100vw * (9 / 375));
+  height: calc(100vw * (9 / 375));
+  margin: 0 calc(100vw * (3 / 375));
+}
+
+.middleCircle {
+  width: calc(100vw * (8 / 375));
+  height: calc(100vw * (8 / 375));
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100vw * (16 / 375));
+  height: calc(100vw * (16 / 375));
+  border: #fff calc(100vw * (3 / 375)) solid;
+  background-color: transparent;
+}
+
 .infoContainer {
   position: absolute;
-  top: 114px;
+  top: calc(100vw * (70 / 375));
   left: calc((100vw - 100vw * (351/ 375)) / 2);
   width: calc(100vw * (351/ 375));
   height: calc(100vw * (394 / 375));
@@ -51,7 +132,7 @@
 
 .address {
   position: absolute;
-  top: calc(114px + 100vw * (12 / 375));
+  top: calc(100vw * ((12 + 70) / 375));
   left: calc((100vw - 100vw * (351 / 375)) / 2 + 100vw * (26/ 375));
   background-color: rgb(232, 241, 251);
   color: rgb(20, 20, 20);
@@ -63,7 +144,7 @@
 
 .name {
   position: absolute;
-  top: calc(114px + 100vw * (12 / 375));
+  top: calc(100vw * ((12 + 70) / 375));
   left: calc((100vw - 100vw * (351/ 375)) / 2 + 100vw * (130/ 375));
   background-color: rgb(232, 241, 251);
   color: rgb(20, 20, 20);
@@ -75,7 +156,7 @@
 
 .time {
   position: absolute;
-  top: calc(114px + 100vw * (58 / 375));
+  top: calc(100vw * ((58 + 70) / 375));
   left: calc((100vw - 100vw * (351/ 375)) / 2 + 100vw * (58/ 375));
   width: calc(100vw * (240 / 375));
   text-align: center;
@@ -83,4 +164,24 @@
   color: #000;
   font-size: calc(100vw * 31 / 375);
   font-family: PingFangSC-Semibold, sans-serif;
+}
+
+.otherInfoContainer {
+  position: absolute;
+  top: calc(100vw * ((394 + 70 + 8) / 375));
+  left: calc((100vw - 100vw * (352/ 375)) / 2);
+  width: calc(100vw * (352/ 375));
+  height: calc(100vw * (126 / 375));
+}
+
+.text {
+  position: absolute;
+  top: calc(100vw * ((394 + 70 + 6 + 126 + 12) / 375));
+  font-size: calc(100vw * 16 / 375);
+  font-family: PingFangSC-Regular, sans-serif;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
