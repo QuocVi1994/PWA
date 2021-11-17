@@ -54,10 +54,10 @@
 
 .leftArrow {
   position: absolute;
-  border-left: #fff 2px solid;
-  border-bottom: #fff 2px solid;
-  width: calc(100vw * (6 / 375));
-  height: calc(100vw * (6 / 375));
+  border-left: #fff 1.5px solid;
+  border-bottom: #fff 1.5px solid;
+  width: calc(100vw * (7 / 375));
+  height: calc(100vw * (7 / 375));
   background-color: transparent;
   left: 20px;
   transform: rotate(45deg);
@@ -76,8 +76,8 @@
   display: flex;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.2);
-  padding: 6px 16px;
-  border: rgba(255, 255, 255, 0.3) calc(100vw * (1 / 375)) solid;
+  padding: 4px 14px;
+  border: rgba(255, 255, 255, 0.2) calc(100vw * (1 / 375)) solid;
 }
 
 .left {
@@ -88,7 +88,7 @@
 .middle {
   margin: 0 calc(100vw * (10 / 375));
   width: calc(100vw * (1 / 375));
-  height: calc(100vw * (23 / 375));
+  height: calc(100vw * (21 / 375));
   background-color: rgba(255, 255, 255, 0.3);
 }
 .circle {
@@ -104,7 +104,7 @@
 .bigCircle {
   width: calc(100vw * (7 / 375));
   height: calc(100vw * (7 / 375));
-  margin: 0 calc(100vw * (3 / 375));
+  margin: 0 calc(100vw * (2 / 375));
 }
 
 .middleCircle {
@@ -116,9 +116,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: calc(100vw * (14 / 375));
-  height: calc(100vw * (14 / 375));
-  border: #fff calc(100vw * (3 / 375)) solid;
+  width: calc(100vw * (12 / 375));
+  height: calc(100vw * (12 / 375));
+  border: #fff calc(100vw * (2 / 375)) solid;
   background-color: transparent;
 }
 
