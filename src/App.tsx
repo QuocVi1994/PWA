@@ -1,8 +1,8 @@
-import React, { Suspense } from 'react'
+import React, { Suspense, lazy } from 'react'
 import { Routes, Route } from 'react-router-dom';
-import YueKangCode from './pages/YueKangeCode';
-import About from './pages/About';
-import { buildBaseURL } from '../configs/constants';
+
+const YueKangCode = lazy(() => import('./pages/YueKangeCode'));
+const About = lazy(() => import('./pages/About'));
 
 const App = () => {
   return (
