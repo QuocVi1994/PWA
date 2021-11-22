@@ -16,6 +16,8 @@ const YueKangCode: React.FC = () => {
   const [address, setAddress] = useState(
     localStorage.getItem("address") || "广州"
   );
+  const [yimiao, setyimiao] = useState(localStorage.getItem("yimiao") || "");
+  const [hesuan, sethesuan] = useState(localStorage.getItem("hesuan") || "");
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -48,6 +50,18 @@ const YueKangCode: React.FC = () => {
       setName(handleName);
       localStorage.setItem("name", handleName);
     }
+  }, []);
+
+  const popupHeSuanTime = useCallback(() => {
+    const hesuan = prompt("请输入核酸时间，按规则！", "");
+    sethesuan(hesuan || "");
+    localStorage.setItem("hesuan", hesuan || "");
+  }, []);
+  
+  const popupYiMiaoTime = useCallback(() => {
+    const yimiao = prompt("请输入疫苗时间，按规则！", "");
+    setyimiao(yimiao || "");
+    localStorage.setItem("yimiao", yimiao || "");
   }, []);
 
   return (
@@ -84,6 +98,12 @@ const YueKangCode: React.FC = () => {
         </div>
         <div onClick={popupName} className="name">
           {name}
+        </div>
+        <div onClick={popupHeSuanTime} className="hesuan" style={!hesuan ? { backgroundColor: 'transparent'} : {}}>
+          {hesuan}
+        </div>
+        <div onClick={popupYiMiaoTime} className="yimiao" style={!yimiao ? { backgroundColor: 'transparent'} : {}}>
+          {yimiao}
         </div>
         <div className="time">{timestamp}</div>
         <div className="text">
